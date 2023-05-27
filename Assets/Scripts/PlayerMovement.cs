@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float crouchSpeed;
     public float crouchScale;
+    public float downSpeed;
     private Rigidbody2D rb;
     private Animator anim;
     private bool isCrouching = false;
@@ -49,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("IsRunning", false);
         }
+
+        if (Input.GetKey(KeyCode.H))
+        {
+            rb.velocity += Vector2.down * downSpeed;
+        }
     }
 
     private void Update()
@@ -60,20 +66,10 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.J) && !isAttacking)
+        if (Input.GetKeyDown(KeyCode.H) && !isAttacking && isJumping)
         {
-            if (isJumping)
-            {
-                anim.SetBool("Jump", false);
-                anim.SetBool("IsDownAttack", true);
-            }
-            else
-            {
-                anim.SetBool("IsPunch", true);
-            }
-
-            isAttacking = true;
-            attackTime = 0f;
+            anim.SetBool("Jump", false);
+            anim.SetBool("IsDownAttack", true);
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -90,20 +86,15 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
-        if (isAttacking && attackTime >= 0.5f)
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            if (isJumping)
-            {
-                anim.SetBool("IsDownAttack", false);
-            }
-            else
-            {
-                anim.SetBool("IsPunch", false);
-            }
-
-            isAttacking = false;
+            attackTime = 0f;
+            anim.SetBool("IsPunch", true);
         }
-
+        if (anim.GetBool("IsPunch") && attackTime >= 0.5f)
+        {
+            anim.SetBool("IsPunch", false);
+        }
         attackTime += Time.deltaTime;
     }
 
