@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -705,7 +717,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_28
+      name: Player_Punch_5
       rect:
         serializedVersion: 2
         x: 48
@@ -726,7 +738,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_29
+      name: Player_Punch_4
       rect:
         serializedVersion: 2
         x: 85
@@ -789,7 +801,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_32
+      name: Player_Punch_1
       rect:
         serializedVersion: 2
         x: 210
@@ -810,7 +822,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_33
+      name: Player_Punch_2
       rect:
         serializedVersion: 2
         x: 243
@@ -894,7 +906,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_37
+      name: Player_Punch_3
       rect:
         serializedVersion: 2
         x: 358
@@ -2989,16 +3001,11 @@ TextureImporter:
       Player1_25: -764124190
       Player1_26: 52975066
       Player1_27: 623879698
-      Player1_28: -1337526907
-      Player1_29: 171802574
       Player1_30: 466699526
       Player1_31: -2029060328
-      Player1_32: -1422395933
-      Player1_33: 1038061891
       Player1_34: 845577645
       Player1_35: -1784733760
       Player1_36: 334084594
-      Player1_37: -1922641134
       Player1_38: 623595309
       Player1_39: 1210241075
       Player1_4: 442790748
@@ -3068,6 +3075,11 @@ TextureImporter:
       Player_Jump_2: 426498466
       Player_Jump_3: -1346483188
       Player_Jump_4: -1008343857
+      Player_Punch_1: -1422395933
+      Player_Punch_2: 1038061891
+      Player_Punch_3: -1922641134
+      Player_Punch_4: 171802574
+      Player_Punch_5: -1337526907
       Player_RUN_1: 1279438621
       Player_RUN_2: 1554228373
       Player_RUN_3: 258751618
