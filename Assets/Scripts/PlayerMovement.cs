@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private bool isCrouching = false;
     private bool isJumping = false;
+    private bool isAttacking = false;
     private float attackTime = 0f;
     public GameObject goWin;
 
@@ -59,6 +60,22 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
 
+        if (Input.GetKeyDown(KeyCode.J) && !isAttacking)
+        {
+            if (isJumping)
+            {
+                anim.SetBool("Jump", false);
+                anim.SetBool("IsDownAttack", true);
+            }
+            else
+            {
+                anim.SetBool("IsPunch", true);
+            }
+
+            isAttacking = true;
+            attackTime = 0f;
+        }
+
         if (Input.GetKeyDown(KeyCode.S))
         {
             isCrouching = true;
@@ -73,25 +90,28 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (isAttacking && attackTime >= 0.5f)
         {
-            attackTime = 0f; // Сбросить время, прошедшее с начала атаки
-            anim.SetBool("IsPunch", true);
+            if (isJumping)
+            {
+                anim.SetBool("IsDownAttack", false);
+            }
+            else
+            {
+                anim.SetBool("IsPunch", false);
+            }
+
+            isAttacking = false;
         }
 
-        // Если анимация атаки активна и прошла 1 секунда, остановить анимацию
-        if (anim.GetBool("IsPunch") && attackTime >= 0.5f)
-        {
-            anim.SetBool("IsPunch", false);
-        }
-
-        attackTime += Time.deltaTime; // Увеличить время, прошедшее после нажатия клавиши J
+        attackTime += Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            anim.SetBool("IsDownAttack", false);
             anim.SetBool("Jump", false);
             isJumping = false;
         }
