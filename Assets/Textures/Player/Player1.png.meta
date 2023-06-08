@@ -1074,15 +1074,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_45
+      name: Player_BLOCK_1
       rect:
         serializedVersion: 2
-        x: 631
+        x: 630
         y: 250
         width: 26
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2229,15 +2229,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_100
+      name: Player_DIE_1
       rect:
         serializedVersion: 2
         x: 571
         y: 124
         width: 33
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2250,15 +2250,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_101
+      name: Player_DIE_2
       rect:
         serializedVersion: 2
         x: 612
         y: 124
         width: 36
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2271,15 +2271,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_102
+      name: Player_DIE_3
       rect:
         serializedVersion: 2
         x: 656
         y: 124
         width: 36
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2954,9 +2954,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Player1_10: 1034760928
-      Player1_100: 1311608465
-      Player1_101: 881167717
-      Player1_102: 1333923602
       Player1_105: 181638275
       Player1_106: -2053376221
       Player1_107: 777829800
@@ -3012,7 +3009,6 @@ TextureImporter:
       Player1_42: 33780640
       Player1_43: 1364823678
       Player1_44: 1080295003
-      Player1_45: 1937937698
       Player1_46: 1784552488
       Player1_47: 960872299
       Player1_48: -1142622043
@@ -3062,6 +3058,10 @@ TextureImporter:
       Player1_98: -1421157839
       Player1_99: 180270806
       Player_123123: 1622843535
+      Player_BLOCK_1: 1937937698
+      Player_DIE_1: 1311608465
+      Player_DIE_2: 881167717
+      Player_DIE_3: 1333923602
       Player_DownAttack_1: 1330036829
       Player_DownAttack_2: 1166166755
       Player_Down_2: 31835353

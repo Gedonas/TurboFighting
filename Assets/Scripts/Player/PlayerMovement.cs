@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private float attackTime = 0f;
     public GameObject goWin;
 
+    private bool isBlockAnimationPlaying = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,11 +29,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
 
-        if (isCrouching)
+        if (isCrouching && !isBlockAnimationPlaying)
         {
             rb.velocity = new Vector2(moveHorizontal * crouchSpeed, rb.velocity.y);
         }
-        else
+        else if (!isBlockAnimationPlaying)
         {
             rb.velocity = new Vector2(moveHorizontal * speed, rb.velocity.y);
         }
@@ -96,6 +98,17 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("IsPunch", false);
         }
         attackTime += Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            anim.SetBool("IsBlock", true);
+            isBlockAnimationPlaying = true;
+        }
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            anim.SetBool("IsBlock", false);
+            isBlockAnimationPlaying = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

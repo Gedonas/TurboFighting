@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - AttackPlayer
+  - EnemyAttackEasy
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 900621463
+    locked: 0
+  - name: Platforms
+    uniqueID: 2567418291
+    locked: 0
+  - name: Enemy
+    uniqueID: 3263648957
+    locked: 0
+  - name: Player
+    uniqueID: 1262034081
     locked: 0
