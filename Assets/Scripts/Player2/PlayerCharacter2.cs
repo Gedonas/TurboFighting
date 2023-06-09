@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerCharacter2 : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
@@ -27,7 +27,17 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveHorizontal = 0f;
+
+        // Check for left and right movement keys
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            moveHorizontal = -1f;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            moveHorizontal = 1f;
+        }
 
         if (isCrouching && !isBlockAnimationPlaying)
         {
@@ -53,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("IsRunning", false);
         }
 
-        if (Input.GetKey(KeyCode.H))
+        if (Input.GetKey(KeyCode.Keypad1))
         {
             rb.velocity += Vector2.down * downSpeed;
         }
@@ -61,34 +71,34 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !isJumping)
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             anim.SetBool("Jump", true);
             isJumping = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.H) && !isAttacking && isJumping)
+        if (Input.GetKeyDown(KeyCode.Keypad1) && !isAttacking && isJumping)
         {
             anim.SetBool("Jump", false);
             anim.SetBool("IsDownAttack", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             isCrouching = true;
             anim.SetBool("IsCrouching", true);
             rb.velocity = Vector2.zero;
             transform.localScale = new Vector3(1f, crouchScale, 1f);
         }
-        else if (Input.GetKeyUp(KeyCode.S))
+        else if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             isCrouching = false;
             anim.SetBool("IsCrouching", false);
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Keypad2))
         {
             attackTime = 0f;
             anim.SetBool("IsPunch", true);
@@ -99,12 +109,12 @@ public class PlayerMovement : MonoBehaviour
         }
         attackTime += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.Keypad3))
         {
             anim.SetBool("IsBlock", true);
             isBlockAnimationPlaying = true;
         }
-        if (Input.GetKeyUp(KeyCode.K))
+        if (Input.GetKeyUp(KeyCode.Keypad3))
         {
             anim.SetBool("IsBlock", false);
             isBlockAnimationPlaying = false;
@@ -119,5 +129,9 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Jump", false);
             isJumping = false;
         }
+    }
+    public bool IsBlocking()
+    {
+        return isBlockAnimationPlaying;
     }
 }

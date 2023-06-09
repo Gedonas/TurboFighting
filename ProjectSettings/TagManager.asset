@@ -5,16 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - AttackPlayer
-  - EnemyAttackEasy
+  - AttackPlayer1
+  - AttackPlayer2
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player1
   - Water
   - UI
-  - 
+  - Player2
   - 
   - 
   - 
@@ -50,9 +50,9 @@ TagManager:
   - name: Platforms
     uniqueID: 2567418291
     locked: 0
-  - name: Enemy
+  - name: Player1
     uniqueID: 3263648957
     locked: 0
-  - name: Player
+  - name: Player2
     uniqueID: 1262034081
     locked: 0

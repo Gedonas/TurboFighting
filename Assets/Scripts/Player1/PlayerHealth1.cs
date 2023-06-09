@@ -2,28 +2,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth1 : MonoBehaviour
 {
-    public Slider healthSlider; //Публичная переменная для слайдера ХП
-    public int maxHealth; //Публичаня переменная для максимального ХП
-    public int currentHealth; //Публичная переменная для текущего ХП
-    public GameObject GoDie; //Публияная переменная для отображения "окна смерти"
-    public GameObject MainPlayer; //Публичная переменая для указания go_player
+    public Slider healthSlider; // Публичная переменная для слайдера ХП
+    public int maxHealth; // Публичная переменная для максимального ХП
+    public int currentHealth; // Публичная переменная для текущего ХП
+    public GameObject GoDie; // Публичная переменная для отображения "окна смерти"
+    public GameObject MainPlayer; // Публичная переменная для указания go_player
     public Animator playerAnimator; // Публичная переменная для компонента аниматора игрока
 
-    private bool isTakingDamage = false; //Флаг для получения урона
+    private bool isTakingDamage = false; // Флаг для получения урона
     private bool isDead = false; // Флаг для проверки состояния смерти игрока
 
     void Start()
     {
-        currentHealth = maxHealth; //Текущее ХП соответствует максимальному
-        healthSlider.maxValue = maxHealth; //Текущее масимальное ХП отображается на слайдер
-        healthSlider.value = currentHealth; //Текущее ХП отображается на слайдер
+        currentHealth = maxHealth; // Текущее ХП соответствует максимальному
+        healthSlider.maxValue = maxHealth; // Текущее максимальное ХП отображается на слайдере
+        healthSlider.value = currentHealth; // Текущее ХП отображается на слайдере
     }
 
     public void OnTriggerEnter2D(Collider2D damageenemy)
     {
-        if ((damageenemy.CompareTag("EnemyAttackEasy")) && !isTakingDamage && !isDead)
+        if ((damageenemy.CompareTag("AttackPlayer2")) && !isTakingDamage && !isDead && !MainPlayer.GetComponent<PlayerCharacter1>().IsBlocking())
         {
             isTakingDamage = true;
             currentHealth--;
