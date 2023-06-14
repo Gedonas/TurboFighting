@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class SceneManegarSettings : MonoBehaviour
 {
     public int indexScene;
-
     public void LoadSceneIndex()
     {
         SceneManager.LoadScene(indexScene);
@@ -13,5 +12,9 @@ public class SceneManegarSettings : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

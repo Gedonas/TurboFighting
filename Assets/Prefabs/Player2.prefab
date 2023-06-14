@@ -283,10 +283,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3368554, y: 0.82374007}
+  m_Offset: {x: 0.3368554, y: 1.3741895}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -297,7 +297,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26472044, y: 0.52058864}
+  m_Size: {x: 0.26472044, y: 0.5665982}
   m_EdgeRadius: 0
 --- !u!1 &6155904692052173321
 GameObject:
@@ -599,12 +599,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7928747779518846950}
-  - component: {fileID: 7928747779518846951}
+  - component: {fileID: 540743185905470331}
   - component: {fileID: 7928747779518846949}
   - component: {fileID: 7928747779518846946}
   - component: {fileID: 4296002940263154253}
   - component: {fileID: -1523738528244997089}
-  - component: {fileID: 7928747779518846948}
+  - component: {fileID: 7430532487539484423}
   m_Layer: 3
   m_Name: Player2
   m_TagString: Untagged
@@ -629,7 +629,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7928747779518846951
+--- !u!212 &540743185905470331
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -670,12 +670,12 @@ SpriteRenderer:
   m_SortingLayerID: -1031318339
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 251849357, guid: f865e519e6ce80440ac4c4713dfbe2d5, type: 3}
+  m_Sprite: {fileID: -679373384, guid: 2a805ee0065bc6b4d93766dd5f8c6f70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.17, y: 0.34}
+  m_Size: {x: 0.85, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -699,7 +699,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.85, y: 1.7}
-    newSize: {x: 0.17, y: 0.34}
+    newSize: {x: 0.85, y: 1.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -763,8 +763,8 @@ MonoBehaviour:
   currentHealth: 10
   GoDie: {fileID: 0}
   MainPlayer: {fileID: 7928747779518846947}
-  playerAnimator: {fileID: 7928747779518846948}
---- !u!95 &7928747779518846948
+  playerAnimator: {fileID: 7430532487539484423}
+--- !u!95 &7430532487539484423
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -774,7 +774,7 @@ Animator:
   m_GameObject: {fileID: 7928747779518846947}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d6ddc7b251b1384ba6320cd487256e8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0599f878236e378469a1d0f22e6923a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
