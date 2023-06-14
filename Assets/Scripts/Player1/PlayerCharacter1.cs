@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 public class PlayerCharacter1 : MonoBehaviour
 {
     public float speed;
@@ -19,10 +19,13 @@ public class PlayerCharacter1 : MonoBehaviour
 
     private bool isBlockAnimationPlaying = false;
 
+    PhotonView view;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        view = GetComponent<PhotonView>();
     }
 
     void FixedUpdate()
