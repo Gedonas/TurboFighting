@@ -7,9 +7,10 @@ public class PlayerHealth2 : MonoBehaviour
     public Slider healthSlider; // Публичная переменная для слайдера ХП
     public int maxHealth; // Публичная переменная для максимального ХП
     public int currentHealth; // Публичная переменная для текущего ХП
-    public GameObject GoDie; // Публичная переменная для отображения "окна смерти"
     public GameObject MainPlayer; // Публичная переменная для указания go_player
     public Animator playerAnimator; // Публичная переменная для компонента аниматора игрока
+
+    public VictoryMenu victoryMenu;
 
     private bool isTakingDamage = false; // Флаг для получения урона
     private bool isDead = false; // Флаг для проверки состояния смерти игрока
@@ -47,6 +48,6 @@ public class PlayerHealth2 : MonoBehaviour
     {
         playerAnimator.SetTrigger("Die"); // Запускаем анимацию смерти
         yield return new WaitForSeconds(1.0f); // Ждем 1 секунду для завершения анимации
-        GoDie.SetActive(true); // Включаем "окно смерти"
+        victoryMenu.ShowVictoryMenu(gameObject); // Показываем экран победы и передаем победителя
     }
 }

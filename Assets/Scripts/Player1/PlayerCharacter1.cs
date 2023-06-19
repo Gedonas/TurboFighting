@@ -28,7 +28,7 @@ public class PlayerCharacter1 : MonoBehaviour
         view = GetComponent<PhotonView>();
     }
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         float moveHorizontal = 0f;
 

@@ -763,9 +763,10 @@ MonoBehaviour:
   healthSlider: {fileID: 3856634760435259242}
   maxHealth: 10
   currentHealth: 10
-  GoDie: {fileID: 5159202097993205782}
   MainPlayer: {fileID: 7928747779518846947}
   playerAnimator: {fileID: 7928747779518846948}
+  Canvas: {fileID: 6957897006707937193}
+  victoryMenu: {fileID: 0}
 --- !u!95 &7928747779518846948
 Animator:
   serializedVersion: 5

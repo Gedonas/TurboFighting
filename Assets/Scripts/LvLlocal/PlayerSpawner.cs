@@ -9,6 +9,7 @@ public class PlayerSpawner : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
         // Создаем первого игрока
         GameObject player1 = Instantiate(playerPrefab1, spawnPoint1.position, Quaternion.identity);
 

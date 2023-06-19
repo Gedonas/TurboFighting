@@ -15,7 +15,6 @@ public class PlayerCharacter2 : MonoBehaviour
     private bool isJumping = false;
     private bool isAttacking = false;
     private float attackTime = 0f;
-    public GameObject goWin;
 
     private bool isBlockAnimationPlaying = false;
 
