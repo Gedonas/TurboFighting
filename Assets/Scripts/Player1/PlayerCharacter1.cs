@@ -15,7 +15,6 @@ public class PlayerCharacter1 : MonoBehaviour
     private bool isJumping = false;
     private bool isAttacking = false;
     private float attackTime = 0f;
-    public GameObject goWin;
 
     private bool isBlockAnimationPlaying = false;
 
@@ -73,7 +72,7 @@ public class PlayerCharacter1 : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.W) && !isJumping)
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             anim.SetBool("Jump", true);

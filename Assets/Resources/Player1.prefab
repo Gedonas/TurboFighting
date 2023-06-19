@@ -286,7 +286,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.33064437, y: 1.4414399}
+  m_Offset: {x: 0.33064437, y: 1.3439306}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -297,7 +297,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26472044, y: 0.5231136}
+  m_Size: {x: 0.26472044, y: 0.3280952}
   m_EdgeRadius: 0
 --- !u!1 &6155904692052173321
 GameObject:
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: -6681285389331545438}
   m_Layer: 3
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,7 +747,6 @@ MonoBehaviour:
   crouchSpeed: 1
   crouchScale: 1
   downSpeed: 1
-  goWin: {fileID: 0}
 --- !u!114 &1828074931759998730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,7 +764,6 @@ MonoBehaviour:
   currentHealth: 10
   MainPlayer: {fileID: 7928747779518846947}
   playerAnimator: {fileID: 7928747779518846948}
-  Canvas: {fileID: 6957897006707937193}
   victoryMenu: {fileID: 0}
 --- !u!95 &7928747779518846948
 Animator:
@@ -836,7 +834,7 @@ MonoBehaviour:
     ExtrapolateNumberOfStoredPositions: 1
   m_RotationModel:
     SynchronizeEnabled: 0
-    InterpolateOption: 1
+    InterpolateOption: 0
     InterpolateRotateTowardsSpeed: 180
     InterpolateLerpSpeed: 5
   m_ScaleModel:

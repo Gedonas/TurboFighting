@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 653512762384412346}
   m_Layer: 3
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,7 +747,6 @@ MonoBehaviour:
   crouchSpeed: 1
   crouchScale: 1
   downSpeed: 1
-  goWin: {fileID: 0}
 --- !u!114 &-1523738528244997089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,7 +764,6 @@ MonoBehaviour:
   currentHealth: 10
   MainPlayer: {fileID: 7928747779518846947}
   playerAnimator: {fileID: 7430532487539484423}
-  Canvas: {fileID: 6957897006707937193}
   victoryMenu: {fileID: 0}
 --- !u!95 &7430532487539484423
 Animator:
